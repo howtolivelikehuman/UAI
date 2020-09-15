@@ -1,0 +1,61 @@
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    #container {
+      width: 60%;
+      margin: 0 auto;     /* 가로로 중앙에 배치 */
+      padding-top: 12%;   /* 테두리와 내용 사이의 패딩 여백 */
+    }
+    #list {
+      text-align: center;
+    }
+    /* Bootstrap 수정 */
+     #imgclass{
+      border-right: 0;
+    }
+    .table > thead > tr > th {
+      background-color: #f96666;
+      text-align: center;
+      color : #ffffff;
+      font-family: 'Noto Sans KR';
+    }
+    .table> thead > tr > td {
+      background-color: #f9f7f7;
+    }
+    .table-hover > tbody > tr:hover {
+      background-color: #ffffff;
+    }
+    .table > tbody > tr > td, .table > tbody > tr > th {
+      text-align: center;
+    }
+    .table > tbody > tr > #title {
+      text-align: left;
+    }
+     
+    div > .paging1 {
+      text-align: left;
+    }
+
+    div > .paging2 {
+      text-align: center;
+    }
+    div > .paging3 {
+      text-align:right;
+    }
+     
+    .hot {
+      animation-name: blink;
+      animation-duration: 1.5s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+     
+    /* 애니메이션 지점 설정하기 */
+    /* 익스플로러 10 이상, 최신 모던 브라우저에서 지원 */
+    @keyframes blink {
+      from {color: white;}
+      30% {color: yellow;}
+      to {color: red; font-weight: bold;}
+      /* 0% {color:white;}
+      30% {color: yellow;}
+      100% {color:red; font-weight: bold;} */
+    }

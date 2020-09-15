@@ -1,0 +1,54 @@
+.calendar{
+	border-color : #e2e2e2;
+	border-width: 2px;
+	border-style: solid;
+	display: inline-block;
+	font-size: 16pt;
+	font-weight: 1000;
+}
+th{
+	line-height: 5vw;
+	text-align: center;
+	color: white;
+	background-color: #f96666;
+}
+th > button{
+	color: white;
+}
+td{
+	width: 5vw;
+	height: 5vw;
+	line-height: 5vw;
+	text-align: center;
+	padding: 0;
+}
+iframe{
+	width: 25vw;
+	height: 40vw;
+}
+button,button:focus,button:active{
+	width: 5vw;
+	height: 5vw;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 50%;
+	padding: 0;
+}
+.clickable:not(.selected):hover{
+	border-color : #f96666;
+	border-width: 2px;
+	border-style: solid;
+	height: 5vw;
+	line-height: 5vw;
+	width: 5vw;
+	padding: 0;
+}
+.clickable.selected{
+	background-color: #f96666;
+	color: white;
+	border : 2px solid transparent;
+	height: 5vw;
+	line-height: 5vw;
+	width: 5vw;
+	padding: 0;
+}

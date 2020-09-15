@@ -1,0 +1,75 @@
+DB NAME = UHSLGH // Collation utf8-bin
+
+
+CREATE database UHSLGH CHARACTER SET utf8 COLLATE utf8_bin;
+
+CREATE TABLE account (
+	id varchar(30) NOT NULL,
+	pw varchar(20) NOT NULL,
+	name varchar(20) NOT NULL,
+	gender varchar(10) NOT NULL,
+	byear int(11) unsigned NOT NULL,
+	bmonth int(11) unsigned NOT NULL,
+	bdate int(11) unsigned NOT NULL,
+	email varchar(50) NOT NULL,
+	isadmin tinyint(1) NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE board (
+	uid int(10) unsigned NOT NULL,
+	usr varchar(20) NOT NULL,
+	name varchar(255) NOT NULL,
+	place varchar(255) NOT NULL,
+	start_date int(10) unsigned NOT NULL,
+	fin_date int(10) unsigned NOT NULL,
+	info text NOT NULL,
+	save_name varchar(255)  NOT NULL,
+	up_filename varchar(255) NOT NULL,
+	is_checked tinyint(1) NOT NULL,
+	is_accepted tinyint(1) NOT NULL,
+	rejectreason text NOT NULL,
+	PRIMARY KEY(uid)
+);
+
+CREATE TABLE free_board(
+	uid int(10) unsigned NOT NULL,
+	gid int(10) unsigned NOT NULL,
+	name varchar(20) NOT NULL,
+	subject varchar(255) NOT NULL,
+	article text NOT NULL,
+	writedate char(10) NOT NULL,
+	refnum int(10) unsigned NOT NULL,
+	comment_count int(11) unsigned NOT NULL,
+	PRIMARY KEY(uid)
+);
+
+CREATE TABLE comment(
+	id int(10) unsigned NOT NULL,
+	pid int(10) unsigned NOT NULL,
+	name varchar(20) NOT NULL,
+	comment text NOT NULL,
+	writedate bigint(14) NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE free_comment(
+	id int(10) unsigned NOT NULL,
+	pid int(10) unsigned NOT NULL,
+	name varchar(20) NOT NULL,
+	comment text NOT NULL,
+	writedate bigint(14) NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE mypage(
+	uid int(10) unsigned NOT NULL,
+	pageid int(10) unsigned NOT NULL,
+	name varchar(20) NOT NULL,
+	subject varchar(255) NOT NULL,
+	my_date int(8) NOT NULL,
+	place varchar(255) NOT NULL,
+	start_date int(10) unsigned NOT NULL,
+	fin_date int(10) unsigned NOT NULL,
+	PRIMARY KEY(uid)
+);
